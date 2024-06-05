@@ -1,0 +1,322 @@
+/* Reset Browser Defaults */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+/* Root Variables */
+html {
+  --first-color: black;
+  --second-color: #777;
+  --third-color: #ad0409;
+  --forth-color: #92deeb;
+  --fifth-color: #2855f8;
+  --sixth-color: #ff7c10;
+  --gradient-color: linear-gradient(black, #ad0409);
+  --contrast-color: white;
+  --base-font-size: 16px;
+}
+/* General Styles*/
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+/* Header */
+header {
+  height: 90px;
+  background-color: var(--third-color);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%) translateY(0) rotate(-7deg);
+  }
+  50% {
+    transform: translateX(0) translateY(-7px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(0) rotate(7deg);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%) translateY(0) rotate(-7deg);
+  }
+  50% {
+    transform: translateX(0) translateY(-7px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-100%) translateY(0) rotate(7deg);
+  }
+}
+
+.from-left {
+  animation: moveLeftToRight 5s linear infinite;
+}
+
+.from-right {
+  animation: moveRightToLeft 5s linear infinite;
+}
+
+.from-left,
+.from-right {
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-title1 {
+  font-size: 2rem;
+  align-self: center;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.logo-mark {
+  max-width: 5%;
+  height: auto;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-item a {
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.menu-item a.active,
+.menu-item a:hover {
+  color: var(--fifth-color);
+}
+
+/* tub Button Styles */
+#checkbox {
+  display: none;
+}
+#checkbox-label {
+  cursor: pointer;
+}
+#portfolio {
+  display: none;
+  fill: var(--contrast-color);
+  width: 1.5rem;
+}
+
+/* Section1 */
+.section-1 {
+  background-image: url(./assets/images/dark-laptop.jpg);
+  color: var(--contrast-color);
+  margin-top: 90px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+
+.introduction-dis::before {
+  content: "“";
+  color: var(--third-color);
+  font-size: 3em;
+}
+
+.introduction-dis::after {
+  content: "”";
+  color: var(--third-color);
+  font-size: 3em;
+}
+
+.self_img {
+  width: 30vw;
+}
+
+.fa-cloud {
+  color: #ad0409;
+}
+
+/* Section2 */
+.section-2 {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+#skillBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  align-items: center; /* 縦方向に中央揃え */
+  justify-items: center;
+}
+
+.skill-title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-size: 1.3rem;
+}
+
+.fa-4x {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.skill-dis {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+/* Section3 */
+.section-3 {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  min-height: 60px;
+  background-color: var(--third-color);
+  padding: 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-footer ul {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer ul li a i {
+  color: initial;
+}
+
+/* Styles for Tablets*/
+@media screen and (max-width: 767px) {
+  #skillBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+/* Styles for Smartphone*/
+@media screen and (max-width: 575px) {
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #portfolio {
+    animation-name: scale, changeColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: block;
+  }
+
+  #nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100vw;
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--third-color);
+    text-align: center;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  .menu-item {
+    display: block;
+    margin: 2rem 0;
+  }
+
+  .menu-item a {
+    font-size: 1.25rem;
+  }
+
+  #checkbox:checked ~ #nav-menu {
+    left: 0;
+  }
+
+  /* Section1 */
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .self_img {
+    width: 60vw;
+  }
+
+  /* Section2 */
+  #skillBox {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,49 @@
+/* Root Variables */
+html {
+  --first-color: black;
+  --second-color: #777;
+  --third-color: #ad0409;
+  --forth-color: #92deeb;
+  --fifth-color: #2855f8;
+  --sixth-color: #ff7c10;
+  --gradient-color: linear-gradient(black, #ad0409);
+  --contrast-color: white;
+  --base-font-size: 16px;
+}
+
+main {
+  margin: 1rem;
+  margin-top: 100px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.thumbnail {
+  display: inline-block;
+  height: 15rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.thumbnail img {
+  height: 100%;
+}
+
+/* Styles for Smartphone*/
+/* @media screen and (max-width: 575px) {
+  .project-img1,
+  .project-img2,
+  .project-img3,
+  .project-img4 {
+    width: 80%;
+  }
+  .thumbnail {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .thumbnail img {
+    width: 100%;
+  }
+} */
