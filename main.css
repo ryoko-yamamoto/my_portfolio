@@ -116,7 +116,8 @@ nav {
 
 .menu-item a.active,
 .menu-item a:hover {
-  color: var(--fifth-color);
+  color: var(--sixth-color);
+  text-decoration: underline;
 }
 
 /* tub Button Styles */
@@ -134,7 +135,7 @@ nav {
 
 /* Section1 */
 .section-1 {
-  background-image: url(./assets/images/dark-laptop.jpg);
+  background-color: var(--first-color);
   color: var(--contrast-color);
   margin-top: 90px;
   padding: 2rem;
@@ -179,6 +180,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 #skillBox {
   display: grid;
@@ -219,6 +224,10 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Footer */
@@ -258,18 +267,6 @@ footer ul li a i {
 
 /* Styles for Smartphone*/
 @media screen and (max-width: 575px) {
-  @keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
   #portfolio {
     animation-name: scale, changeColor;
     animation-duration: 2s;
@@ -287,6 +284,8 @@ footer ul li a i {
     text-align: center;
     z-index: 2;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
   }
   .menu-item {
     display: block;
