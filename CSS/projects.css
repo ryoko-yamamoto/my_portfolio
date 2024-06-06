@@ -12,7 +12,7 @@ html {
 }
 
 main {
-  margin: 1rem;
+  margin: 2rem;
   margin-top: 100px;
 }
 
@@ -70,6 +70,9 @@ h1 {
 
 /* Styles for Smartphone*/
 @media screen and (max-width: 575px) {
+  main {
+    margin: 1rem;
+  }
   .project-img1,
   .project-img2,
   .project-img3,
